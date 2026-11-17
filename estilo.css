@@ -38,7 +38,17 @@ main{padding:20px 16px 110px}
 .prom h2{font-size:clamp(26px,4vw,38px);margin:8px 0 8px;color:#fff}
 .prom h2 span{display:inline-block;background:#fff;color:var(--tq2);padding:0 12px;border-radius:12px;transform:rotate(-2deg)}
 .prom p{margin:0;opacity:.96;font-size:17px;max-width:60ch}
-.prom .letra{font-size:13.5px;opacity:.85;margin-top:10px}
+.prom .letra{font-size:13.5px;opacity:.85;margin-top:12px}
+.tiendas{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;position:relative}
+.tienda{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;text-decoration:none;border-radius:12px;padding:8px 16px 8px 12px;line-height:1.15;border:1px solid rgba(255,255,255,.35)}
+.tienda small{display:block;font-size:11px;letter-spacing:0;text-transform:none;font-weight:600;opacity:.85}
+.tienda b{font-size:17px;font-weight:700}.tienda:hover{background:#1a1a1a}
+.estrellas{color:#f5b301;display:inline-flex;gap:2px}
+.resena{display:flex;flex-direction:column;gap:10px}.resena q{font-size:17px;color:var(--txt);quotes:"«" "»"}
+.resena cite{font-style:normal;font-weight:700;color:var(--mar);font-size:15px;margin-top:auto}
+.nota-g{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.nota-g .num{font-size:52px;font-weight:800;color:#fff;line-height:1}
+.legal h3{color:var(--mar);margin:26px 0 8px;font-size:20px}.legal ol,.legal ul{padding-left:22px}.legal li{margin:6px 0}
 section.s{margin-top:46px;scroll-margin-top:120px}
 .tit{text-align:center;margin-bottom:22px}.tit small{color:var(--tq);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px}
 .tit h2{font-size:clamp(28px,4.2vw,40px);color:var(--mar);margin:6px 0 0}
