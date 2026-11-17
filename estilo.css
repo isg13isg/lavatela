@@ -103,6 +103,14 @@ background:linear-gradient(135deg,#00a9c6 0%,var(--tq) 45%,var(--mar) 100%);box-
 .regalo .letra{flex-basis:100%;font-size:12.5px;font-weight:600;opacity:.85;margin:0}
 .regalo>*:not(.bur){position:relative}
 @media(max-width:600px){.regalo .btn{flex:1 1 100%}.regalo .ic{width:52px;height:52px}}
+.info .w{align-items:center}
+.idi{position:relative;margin-inline-start:auto;font-weight:700}
+.idi summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.35)}
+.idi summary::-webkit-details-marker{display:none}.idi[open] summary{background:rgba(255,255,255,.15)}
+.idi div{position:absolute;inset-inline-end:0;top:calc(100% + 8px);z-index:20;background:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(3,43,95,.25);padding:6px;min-width:150px;display:grid}
+.idi div a{color:var(--mar);text-decoration:none;padding:9px 12px;border-radius:10px;font-weight:700;font-size:15px}
+.idi div a:hover,.idi div a.on{background:var(--celeste)}
+[dir=rtl] .fila,[dir=rtl] .tiendas{direction:rtl}
 .top-res{margin:16px 0;background:linear-gradient(135deg,var(--mar),var(--mar2));color:#fff;border-radius:20px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
 .top-res .tx{flex:1 1 280px;min-width:0}.top-res b{display:block;font-size:19px;line-height:1.25}.top-res span{color:#c3d0e2;font-size:14.5px}
 .top-res .est{color:#ffc93c;letter-spacing:2px;font-size:15px}
