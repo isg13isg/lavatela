@@ -48,6 +48,14 @@ main{padding:20px 16px 110px}
 .resena cite{font-style:normal;font-weight:700;color:var(--mar);font-size:15px;margin-top:auto}
 .nota-g{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:20px}
 .nota-g .num{font-size:52px;font-weight:800;color:#fff;line-height:1}
+.form{margin:14px 0 6px}.form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px;color:var(--mar);margin-bottom:14px}
+.campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0 14px}
+.form input,.form select,.form textarea{font:16px "Open Sans",sans-serif;color:var(--txt);padding:12px 14px;border:1.5px solid var(--borde);border-radius:12px;background:#fff;width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--tq);box-shadow:0 0 0 3px rgba(0,151,178,.18)}
+.form .check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;color:var(--suave)}.form .check input{width:20px;height:20px;margin-top:2px;flex:none}
+.form button{border:0;cursor:pointer;font-family:inherit}.form button:disabled{opacity:.6}
+.oculto{position:absolute;left:-9999px}
+.msg{font-weight:600;margin:12px 0 0}.msg.ok{color:#137a3e}.msg.err{color:#b42a21}
 .legal h3{color:var(--mar);margin:26px 0 8px;font-size:20px}.legal ol,.legal ul{padding-left:22px}.legal li{margin:6px 0}
 section.s{margin-top:46px;scroll-margin-top:120px}
 .tit{text-align:center;margin-bottom:22px}.tit small{color:var(--tq);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px}
