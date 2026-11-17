@@ -89,3 +89,9 @@ footer a{color:#fff}
 #ck{position:fixed;left:12px;right:12px;bottom:84px;z-index:7;max-width:520px;margin:auto;background:var(--mar2);color:#fff;padding:16px;border-radius:18px;font-size:14.5px;display:none;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 #ck a{color:#7fd3e2}#ck button{margin:10px 8px 0 0;padding:9px 18px;border-radius:999px;border:0;font:700 14px "Open Sans",sans-serif;cursor:pointer}
 #ck .si{background:var(--tq);color:#fff}
+.top-res{margin:16px 0;background:linear-gradient(135deg,var(--mar),var(--mar2));color:#fff;border-radius:20px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.top-res .tx{flex:1 1 280px;min-width:0}.top-res b{display:block;font-size:19px;line-height:1.25}.top-res span{color:#c3d0e2;font-size:14.5px}
+.top-res .est{color:#ffc93c;letter-spacing:2px;font-size:15px}
+.top-res .btns{display:flex;flex-wrap:wrap;gap:10px;flex:1 1 280px;justify-content:flex-end}
+.top-res .btn{padding:11px 18px;font-size:15px;white-space:nowrap}.wa{background:#25d366;color:#fff}.wa:hover{background:#1ebe5b}
+@media(max-width:600px){.top-res .btns{justify-content:stretch}.top-res .btn{flex:1 1 140px;padding:11px 10px;gap:6px}}
