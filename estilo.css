@@ -89,6 +89,19 @@ footer a{color:#fff}
 #ck{position:fixed;left:12px;right:12px;bottom:84px;z-index:7;max-width:520px;margin:auto;background:var(--mar2);color:#fff;padding:16px;border-radius:18px;font-size:14.5px;display:none;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 #ck a{color:#7fd3e2}#ck button{margin:10px 8px 0 0;padding:9px 18px;border-radius:999px;border:0;font:700 14px "Open Sans",sans-serif;cursor:pointer}
 #ck .si{background:var(--tq);color:#fff}
+.regalo{position:relative;overflow:hidden;margin-top:16px;border-radius:22px;padding:22px 22px 18px;color:var(--mar2);
+background:linear-gradient(135deg,#ffd84d 0%,#ffb21e 100%);box-shadow:0 14px 34px -16px rgba(255,160,0,.9);display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.regalo .ic{flex:none;width:64px;height:64px;border-radius:18px;background:#fff;display:grid;place-items:center;color:#e8590c;animation:lat 1.6s ease-in-out infinite}
+@keyframes lat{0%,100%{transform:rotate(0)}20%{transform:rotate(-9deg) scale(1.05)}40%{transform:rotate(8deg) scale(1.05)}60%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.regalo .ic{animation:none}}
+.regalo .tx{flex:1 1 300px;min-width:0}
+.regalo small{display:inline-block;background:var(--mar2);color:#ffd84d;font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:6px}
+.regalo h2{margin:0;font-size:clamp(24px,4.6vw,38px);line-height:1.05;font-weight:800;letter-spacing:-.5px}
+.regalo h2 em{font-style:normal;background:#fff;color:#e8590c;padding:0 10px;border-radius:10px;display:inline-block;transform:rotate(-2deg)}
+.regalo p{margin:8px 0 0;font-size:16px;font-weight:600}.regalo p code{font:800 16px "Open Sans",sans-serif;background:var(--mar2);color:#fff;padding:1px 8px;border-radius:6px}
+.regalo .btn{white-space:nowrap;font-size:17px;padding:15px 26px}
+.regalo .letra{flex-basis:100%;font-size:12.5px;font-weight:600;opacity:.8;margin:0}
+@media(max-width:600px){.regalo .btn{flex:1 1 100%}.regalo .ic{width:52px;height:52px}}
 .top-res{margin:16px 0;background:linear-gradient(135deg,var(--mar),var(--mar2));color:#fff;border-radius:20px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
 .top-res .tx{flex:1 1 280px;min-width:0}.top-res b{display:block;font-size:19px;line-height:1.25}.top-res span{color:#c3d0e2;font-size:14.5px}
 .top-res .est{color:#ffc93c;letter-spacing:2px;font-size:15px}
