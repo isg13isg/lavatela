@@ -22,9 +22,12 @@ nav.menu{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:0 16
 nav.menu a{color:var(--mar);text-decoration:none;font-weight:600;font-size:15px;padding:6px 12px;border-radius:999px}
 nav.menu a:hover,nav.menu a.on{background:var(--celeste)}
 nav.menu a.destaca{position:relative;display:inline-flex;align-items:center;gap:6px;color:#fff;background:linear-gradient(135deg,#00a9c6,var(--tq2));box-shadow:0 6px 16px -8px rgba(0,151,178,.9)}
-nav.menu a.destaca:hover,nav.menu a.destaca.on{background:linear-gradient(135deg,var(--tq),var(--mar))}
-nav.menu a.destaca::after{content:"";position:absolute;top:-2px;inset-inline-end:-2px;width:10px;height:10px;border-radius:50%;background:#ff5a5f;border:2px solid #fff;animation:pulso 2s ease-out infinite}
-@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(255,90,95,.55)}70%,100%{box-shadow:0 0 0 9px rgba(255,90,95,0)}}
+nav.menu a.destaca{background:linear-gradient(110deg,#00a9c6 0%,var(--tq2) 38%,#8be6f5 50%,var(--tq2) 62%,#00a9c6 100%);background-size:260% 100%;
+animation:brillo 3.2s linear infinite,llama 4s ease-in-out infinite}
+nav.menu a.destaca svg{animation:lat 1.6s ease-in-out infinite}
+@keyframes brillo{0%{background-position:100% 0}100%{background-position:-60% 0}}
+@keyframes llama{0%,62%,100%{transform:scale(1) rotate(0)}68%{transform:scale(1.08) rotate(-3deg)}74%{transform:scale(1.08) rotate(3deg)}80%{transform:scale(1.06) rotate(-2deg)}86%{transform:scale(1) rotate(0)}}
+nav.menu a.destaca:hover,nav.menu a.destaca.on{background:linear-gradient(135deg,var(--tq),var(--mar));animation:llama 4s ease-in-out infinite}
 .promo-hero{position:relative;overflow:hidden;margin-top:16px;border-radius:var(--radio);padding:clamp(34px,6vw,64px) clamp(22px,5vw,56px);color:#fff;text-align:center;
 background:linear-gradient(120deg,#00a9c6,var(--tq) 30%,var(--mar) 65%,#00a9c6);background-size:300% 300%;animation:fondo 16s ease-in-out infinite;box-shadow:0 18px 40px -18px rgba(3,43,95,.8)}
 @keyframes fondo{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
@@ -41,7 +44,7 @@ background:linear-gradient(120deg,#00a9c6,var(--tq) 30%,var(--mar) 65%,#00a9c6);
 .pasos div{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--borde);border-radius:16px;padding:16px 18px;font-weight:600;color:var(--mar);line-height:1.4}
 .pasos b{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--celeste);color:var(--tq2);font-weight:800}
 .dudas{margin-top:44px;text-align:center}.dudas h3{color:var(--mar);font-size:22px;margin:0 0 14px}
-@media(prefers-reduced-motion:reduce){.promo-hero,nav.menu a.destaca::after{animation:none}}
+@media(prefers-reduced-motion:reduce){.promo-hero,nav.menu a.destaca,nav.menu a.destaca svg{animation:none}}
 main{padding:20px 16px 110px}
 .hero{position:relative;overflow:hidden;background:linear-gradient(155deg,#0a3d7a,var(--mar) 50%,var(--mar2));color:#fff;border-radius:var(--radio);padding:clamp(28px,6vw,64px)}
 .bur{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),rgba(127,211,226,.10) 60%,rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.25);pointer-events:none;animation:flota 18s ease-in-out infinite;will-change:transform}
