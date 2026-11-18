@@ -1,5 +1,5 @@
 (function(){
- var AW="", LBL="", GA="G-4S3S1DBZ0B", CL="";
+ var AW="", LBL="", GA="G-4S3S1DBZ0B", CL="zfrw2qb2e8";
  // Dispositivos del dueño: abrir lavatela.com/?interno=1 una vez en cada navegador → no se mide nada (?interno=0 lo deshace)
  var m=location.search.match(/[?&]interno=([01])/),yo=null;
  try{if(m){m[1]==='1'?localStorage.setItem('interno','1'):localStorage.removeItem('interno');}yo=localStorage.getItem('interno');}catch(e){}
