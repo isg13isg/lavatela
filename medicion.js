@@ -1,5 +1,5 @@
 (function(){
- var AW="", LBL="", GA="G-4S3S1DBZ0B", CL="zfrw2qb2e8";
+ var AW="", LBL="", GA="G-4S3S1DBZ0B", CL="zfrw2qb2e8", FB="1446508383731326";
  // Dispositivos del dueño: abrir lavatela.com/?interno=1 una vez en cada navegador → no se mide nada (?interno=0 lo deshace)
  var m=location.search.match(/[?&]interno=([01])/),yo=null;
  try{if(m){m[1]==='1'?localStorage.setItem('interno','1'):localStorage.removeItem('interno');}yo=localStorage.getItem('interno');}catch(e){}
@@ -13,16 +13,21 @@
  function clarity(){if(!CL||window.clarity)return;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);
   window.clarity('consent');}
- function acepta(){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',analytics_storage:'granted'});clarity();}
+ function meta(){if(!FB||window.fbq)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',FB);fbq('track','PageView');}
+ function acepta(){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',analytics_storage:'granted'});clarity();meta();}
  if(AW||GA){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+(GA||AW);document.head.appendChild(s);
   gtag('js',new Date());if(GA)gtag('config',GA);if(AW)gtag('config',AW);}
- if(AW||GA||CL){if(c==='si')acepta();
+ if(AW||GA||CL||FB){if(c==='si')acepta();
   var b=document.getElementById('ck');if(b&&!c){b.style.display='block';
    b.querySelector('.si').onclick=function(){try{localStorage.setItem('ck','si')}catch(e){}acepta();b.style.display='none';ev('cookies',{eleccion:'aceptar'})};
    b.querySelector('.no').onclick=function(){try{localStorage.setItem('ck','no')}catch(e){}b.style.display='none';ev('cookies',{eleccion:'rechazar'})};}}
  // Embudo: un evento por cada acción que importa
  function ev(n,p){p=p||{};p.pagina=location.pathname;p.idioma=document.documentElement.lang||'es';
-  if(GA)gtag('event',n,p);if(window.clarity)window.clarity('event',n);}
+  if(GA)gtag('event',n,p);if(window.clarity)window.clarity('event',n);
+  if(window.fbq){var s=FBEV[n];if(s)fbq('track',s,{content_name:n,zona:p.zona||''});else if(!/^scroll_|^cookies$/.test(n))fbq('trackCustom',n,{zona:p.zona||''});}}
+ var FBEV={clic_whatsapp:'Contact',clic_llamar:'Contact',clic_como_llegar:'FindLocation'};
  function zona(el){return el.closest('.fija')?'barra_inferior':el.closest('nav')?'menu':el.closest('header')?'cabecera':
   el.closest('footer')?'pie':el.closest('.bloque-promo')?'promocion':el.closest('.hero,.promo-hero,.regalo')?'encabezado':'contenido';}
  document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'',z=zona(a);
