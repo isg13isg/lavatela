@@ -1,5 +1,12 @@
 (function(){
- var AW="", LBL="", GA="", CL="";
+ var AW="", LBL="", GA="G-4S3S1DBZ0B", CL="";
+ // Dispositivos del dueño: abrir lavatela.com/?interno=1 una vez en cada navegador → no se mide nada (?interno=0 lo deshace)
+ var m=location.search.match(/[?&]interno=([01])/),yo=null;
+ try{if(m){m[1]==='1'?localStorage.setItem('interno','1'):localStorage.removeItem('interno');}yo=localStorage.getItem('interno');}catch(e){}
+ if(m){var t=document.createElement('div');t.textContent=m[1]==='1'?'✅ Este dispositivo ya no se cuenta en las estadísticas':'Este dispositivo vuelve a contarse en las estadísticas';
+  t.style.cssText='position:fixed;top:12px;left:12px;right:12px;z-index:9;background:#032b5f;color:#fff;padding:14px;border-radius:14px;text-align:center;font-weight:700';
+  document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(t);setTimeout(function(){t.remove()},6000)});}
+ if(yo==='1'){var k=document.getElementById('ck');if(k)k.remove();return;}
  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;
  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
  var c=null;try{c=localStorage.getItem('ck')}catch(e){}
