@@ -22,10 +22,8 @@ nav.menu{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:0 16
 nav.menu a{color:var(--mar);text-decoration:none;font-weight:600;font-size:15px;padding:6px 12px;border-radius:999px}
 nav.menu a:hover,nav.menu a.on{background:var(--celeste)}
 nav.menu a.destaca{position:relative;display:inline-flex;align-items:center;gap:6px;color:#fff;background:linear-gradient(135deg,#00a9c6,var(--tq2));box-shadow:0 6px 16px -8px rgba(0,151,178,.9)}
-nav.menu a.destaca{background:linear-gradient(110deg,#00a9c6 0%,var(--tq2) 38%,#8be6f5 50%,var(--tq2) 62%,#00a9c6 100%);background-size:260% 100%;
-animation:brillo 3.2s linear infinite,llama 4s ease-in-out infinite}
+nav.menu a.destaca{animation:llama 4s ease-in-out infinite}
 nav.menu a.destaca svg{animation:lat 1.6s ease-in-out infinite}
-@keyframes brillo{0%{background-position:100% 0}100%{background-position:-60% 0}}
 @keyframes llama{0%,62%,100%{transform:scale(1) rotate(0)}68%{transform:scale(1.08) rotate(-3deg)}74%{transform:scale(1.08) rotate(3deg)}80%{transform:scale(1.06) rotate(-2deg)}86%{transform:scale(1) rotate(0)}}
 nav.menu a.destaca:hover,nav.menu a.destaca.on{background:linear-gradient(135deg,var(--tq),var(--mar));animation:llama 4s ease-in-out infinite}
 .promo-hero{position:relative;overflow:hidden;margin-top:16px;border-radius:var(--radio);padding:clamp(34px,6vw,64px) clamp(22px,5vw,56px);color:#fff;text-align:center;
