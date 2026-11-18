@@ -15,7 +15,7 @@ header{background:#fff;border-bottom:1px solid var(--borde);position:sticky;top:
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s}
 .btn:hover{transform:translateY(-1px)}
 .tq{background:var(--tq);color:#fff;box-shadow:0 8px 22px -10px rgba(0,151,178,.9)}.tq:hover{background:var(--tq2)}
-.mar{background:var(--mar);color:#fff}
+.mar{background:var(--mar);color:#fff;box-shadow:0 8px 22px -10px rgba(3,43,95,.9)}.mar:hover{background:var(--mar2)}
 .blanco{background:#fff;color:var(--mar)}
 .borde{background:#fff;color:var(--mar);border-color:var(--borde)}
 nav.menu{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:0 16px 10px}
