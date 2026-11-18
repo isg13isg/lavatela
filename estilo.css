@@ -21,6 +21,27 @@ header{background:#fff;border-bottom:1px solid var(--borde);position:sticky;top:
 nav.menu{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:0 16px 10px}
 nav.menu a{color:var(--mar);text-decoration:none;font-weight:600;font-size:15px;padding:6px 12px;border-radius:999px}
 nav.menu a:hover,nav.menu a.on{background:var(--celeste)}
+nav.menu a.destaca{position:relative;display:inline-flex;align-items:center;gap:6px;color:#fff;background:linear-gradient(135deg,#00a9c6,var(--tq2));box-shadow:0 6px 16px -8px rgba(0,151,178,.9)}
+nav.menu a.destaca:hover,nav.menu a.destaca.on{background:linear-gradient(135deg,var(--tq),var(--mar))}
+nav.menu a.destaca::after{content:"";position:absolute;top:-2px;inset-inline-end:-2px;width:10px;height:10px;border-radius:50%;background:#ff5a5f;border:2px solid #fff;animation:pulso 2s ease-out infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(255,90,95,.55)}70%,100%{box-shadow:0 0 0 9px rgba(255,90,95,0)}}
+.promo-hero{position:relative;overflow:hidden;margin-top:16px;border-radius:var(--radio);padding:clamp(34px,6vw,64px) clamp(22px,5vw,56px);color:#fff;text-align:center;
+background:linear-gradient(120deg,#00a9c6,var(--tq) 30%,var(--mar) 65%,#00a9c6);background-size:300% 300%;animation:fondo 16s ease-in-out infinite;box-shadow:0 18px 40px -18px rgba(3,43,95,.8)}
+@keyframes fondo{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.promo-hero>*:not(.bur){position:relative}
+.promo-hero .etq{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--mar);font-weight:800;font-size:14px;padding:7px 16px;border-radius:999px}
+.promo-hero .etq svg{color:var(--tq2)}.promo-hero .etq::before{display:none}
+.promo-hero h1{font-size:clamp(30px,9vw,92px);overflow-wrap:anywhere;line-height:1;margin:18px 0 12px;text-transform:uppercase;letter-spacing:-1px;font-weight:800}
+.promo-hero p{margin:0 auto;max-width:560px;font-size:clamp(16px,2.2vw,20px);font-weight:600}
+.bloque-promo{margin-top:44px}
+.bloque-promo>h2{display:flex;align-items:center;gap:12px;margin:0;color:var(--mar);font-size:clamp(22px,3vw,28px)}
+.bloque-promo>h2 .n{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--mar);color:#fff;font-size:18px}
+.bloque-promo .regalo,.bloque-promo .prom{margin-top:16px}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin-top:14px}
+.pasos div{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--borde);border-radius:16px;padding:16px 18px;font-weight:600;color:var(--mar);line-height:1.4}
+.pasos b{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--celeste);color:var(--tq2);font-weight:800}
+.dudas{margin-top:44px;text-align:center}.dudas h3{color:var(--mar);font-size:22px;margin:0 0 14px}
+@media(prefers-reduced-motion:reduce){.promo-hero,nav.menu a.destaca::after{animation:none}}
 main{padding:20px 16px 110px}
 .hero{position:relative;overflow:hidden;background:linear-gradient(155deg,#0a3d7a,var(--mar) 50%,var(--mar2));color:#fff;border-radius:var(--radio);padding:clamp(28px,6vw,64px)}
 .bur{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),rgba(127,211,226,.10) 60%,rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.25);pointer-events:none;animation:flota 18s ease-in-out infinite;will-change:transform}
